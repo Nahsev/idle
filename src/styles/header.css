@@ -1,0 +1,49 @@
+.header{
+    margin:   0 0 0 250px;
+}
+
+.place{
+    padding: 0 0 0 50px;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(109, 97, 82);
+    display: flex;
+    align-items: center;
+    
+}
+
+.lineEXP{
+    height: 5px;
+    width:  100%;
+    background-color: aqua;
+}
+
+.headerbotom{
+    background-color: #232a35;
+}
+
+
+.niveles{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.barraYbotones{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.barracontenedor{
+    width: 300%;
+}
+.barra{
+    height: 5px;
+    width: 100%;
+    background-color: blueviolet;
+}
+
+.botones button{
+    background-color:tomato;
+    margin: 10px;
+}

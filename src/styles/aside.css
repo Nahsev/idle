@@ -1,0 +1,30 @@
+
+
+.aside{
+    width: 250px;
+    height: 100vh;
+   position: fixed;
+   background-color: #232a35;
+    padding: 20px;
+    img{
+        margin: 0 10px 0 0;
+    }
+}
+
+
+
+img{
+    width: 25px;
+}
+
+
+.iconName{
+    display: flex;
+    margin-top: 10px;
+}
+
+.link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
