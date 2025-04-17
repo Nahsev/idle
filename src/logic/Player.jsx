@@ -18,6 +18,7 @@ export default class Player {
           RedwoodTree: 95,
         },
         Fishing: {
+          lvl:2,
             RawShrimp: 0,
             RawLobster: 0,
             RawCrab: 0,
@@ -43,8 +44,12 @@ export default class Player {
             RawMagicFish: 0
           }
           ,
-        Firemaking: 12,
-        Cooking: 44,
+        Firemaking: {
+          lvl:3
+        },
+        Cooking: {
+          lvl:44
+        },
         Mining: 60,
         Smithing: 33,
         Thieving: 10,

@@ -1,0 +1,83 @@
+
+
+
+
+
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.zoneContainer{
+    margin: 30px;
+
+    width: 40%;
+    min-width: 500px;
+}
+
+
+.zoneHeader{
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    background-color: #434d5b;
+    align-items: center;
+    justify-content: space-between;
+    div{
+        display: flex;
+    }
+}
+
+.zoneBody{
+    display: flex;
+    background-color: #232a35;
+    margin: 5xp;
+   justify-content: space-between;
+}
+
+
+
+.fishDetails{
+    
+    height: 100%;
+    width: 45%;
+}
+
+
+.fish{
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    display: flex;
+    padding: 10px 20px;
+    transition: transform 0.2s ease;
+}
+
+.fish:hover{
+    background-color: #2d5223;
+    box-shadow: 0 2px 6px rgba(127, 234, 99, 0.5);
+    transform: translateY(-5px)
+}
+.descripcion{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    img{
+        margin-left: -20%;
+    }
+    div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+.detailimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    
+}
