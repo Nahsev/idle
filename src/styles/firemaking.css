@@ -1,65 +1,63 @@
-.firemakincontainer{
-    width: 90%;
-    
-    background-color: aquamarine;
-    
-    margin: 30px;
-    padding: 20px;
-    border-radius: 5px;
-    border-top: #b46624 solid 6px;
-    
+.firemakincontainer {
+  width: 90%;
+
+  background-color: #232a35;
+
+  margin: 30px;
+  padding: 20px;
+  border-radius: 5px;
+  border-top: #b46624 solid 6px;
 }
 
-.bgc{
-    background-color: #343c4a;
-    margin: 3px auto;
-    border-radius: 5px;
-        width: 100%;
-    
+.bgc {
+  background-color: #343c4a;
+  margin: 3px auto;
+  border-radius: 5px;
+  width: 100%;
 }
 
-.selectlog{
-    height: 54px;
-    width: 100%;
-    border-radius: 5px;
+.selectlog {
+  height: 54px;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  select {
+    padding: 10px;
+  }
+}
+
+.logquemar {
+  display: flex;
+  
+}
+
+.log {
+  width: 30%;
+  height: 132px;
+  margin-right: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.probabilitis {
+  width: 70%;
+}
+.imges{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    select{
-        padding: 10px;
-    }
- }
-
- .logquemar{
-        
-        display: flex;
-        justify-content: 
-        
- }
-
- .log{
-    width: 30%;
-    height: 132px;
-    margin-right: 6px;
- }
-
- .probabilitis{
-    width: 70%;
- }
-
- .mastery{
-    height: 10px;
-    
- }
-
-
- .product{
-   height: 10px;
-    
- }
-.exp{
-    height: 10px;
 }
-.quemar{
-    height: 10px;
+.mastery {
+  padding: 0 20%;
+}
+
+.product {
+  
+}
+.exp {
+  
+}
+.quemar {
+  height: 10px;
 }

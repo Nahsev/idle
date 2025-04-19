@@ -1,0 +1,34 @@
+
+.mastercontainer{
+    display: flex;
+    justify-content: space-between;
+
+}
+.masterylvl{
+    display: flex;
+    background-color: #1f66a8;
+}
+
+.masteryheader{
+    width: 20px;
+    height: 20px;
+    
+}
+
+
+.cargamastery{
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    min-height: 10px;
+    width: 200%;
+    background-color: rgb(143, 255, 218);
+    
+}
+.progreso {
+    
+    width: 60%;
+    height: 100%;
+    background-color: #1f66a8;
+    border-radius: 10px;
+  }

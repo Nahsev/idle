@@ -1,0 +1,46 @@
+.TextImg {
+  background-color: #2d3542;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    width: 75%;
+    position: relative;
+    top: 5px;
+  }
+  p {
+    position: relative;
+    top: 10%;
+
+    padding: 0 5px;
+    border-radius: 10px;
+    padding: 0 8px;
+    font-size: 12px;
+    font-weight: 550;
+  }
+}
+
+.big {
+  height: 67px;
+  width: 67px;
+}
+
+.mid {
+  height: 50px;
+  width: 50px;
+}
+
+.small {
+  height: 35px;
+  width: 35px;
+}
+
+.blue {
+  background-color: #5179d6;
+}
+
+.grey {
+  background-color: #6c757d;
+}
