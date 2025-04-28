@@ -32,7 +32,7 @@ function Zone({ zone }) {
                 key={fish.name}
                 onClick={() => handleFishClick(fish)}
               >
-                <img src={fish.img} alt={fish.name} />
+                <img src={`/idle/${fish.img}`} alt={fish.name} />
                 <div className="text">
                   <h3>{fish.nombre}</h3>
                   <p>
@@ -48,7 +48,7 @@ function Zone({ zone }) {
             {selectedFish ? (
               <div>
                 <div className="descripcion">
-                  <img src={selectedFish.img} alt={selectedFish.name} />
+                  <img src={`/idle/${selectedFish.img}`} alt={selectedFish.name} />
                   <div>
                     <p>pesca</p>
                     <p>{selectedFish.nombre}</p>

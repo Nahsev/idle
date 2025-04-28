@@ -5,7 +5,7 @@ function Mastery() {
     <div className="mastercontainer">
       <div className="mastery">
         <div className="masterylvl">
-          <img src="/mastery_header.svg" alt="" className="masteryheader" />
+          <img src="/idle/mastery_header.svg" alt="" className="masteryheader" />
           <p>{12}</p>
         </div>
       </div>
