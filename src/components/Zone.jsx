@@ -1,62 +1,88 @@
-import React from "react";
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
+import TextImg from "../components/TextImg";
 
-function Zone() {
+function Zone({ zone }) {
+  const [selectedFish, setSelectedFish] = useState(null);
+
+  const handleFishClick = (fish) => {
+    setSelectedFish(fish);
+  };
+
   return (
     <div>
       <div className="zoneContainer">
         <div className="zoneHeader">
           <div>
-            <img src="" alt="ojo" />
-            <p>zone name</p>
+            <FontAwesomeIcon icon={faEye} />
+            <p>{zone.name}</p>
           </div>
           <div>
-            <p>pesca 75%</p>
-            <p>basura 25%</p>
-            <p>especial 0%</p>
+            <p>pesca: {zone.probabilities.fishing}% </p>
+            <p>basura: {zone.probabilities.junk}% </p>
+            <p>especial: {zone.probabilities.special}% </p>
           </div>
         </div>
         <div className="zoneBody">
           <div className="fishes">
-            <div className="fish">
-              <img src="" alt="gamba" />
-              <div>
-                <p>gamba cruda</p>
-                <p>EXP de habilidad en 5 de 4.00 s a 8.00 s</p>
+            {zone.fishes.map((fish) => (
+              <div
+                className="fish"
+                key={fish.name}
+                onClick={() => handleFishClick(fish)}
+              >
+                <img src={fish.img} alt={fish.name} />
+                <div className="text">
+                  <h3>{fish.nombre}</h3>
+                  <p>
+                    EXP de habilidad en {fish.exp} de {fish.mintime} s a{" "}
+                    {fish.maxtime} s
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="fish">
-              <img src="" alt="langosta" />
-              <div>
-                <p>langosta cruda</p>
-                <p>EXP de habilidad en 5 de 4.00 s a 8.00 s</p>
-              </div>
-            </div>
-            <div className="fish">
-              <img src="" alt="sardina" />
-              <div>
-                <p>sardina cruda</p>
-                <p>EXP de habilidad en 5 de 4.00 s a 8.00 s</p>
-              </div>
-            </div>
+            ))}
           </div>
+
           <div className="fishDetails">
-            <div>
-              <div className="descripcion">
-                <img src="" alt="gamba" />
-                <div>
-                  <p>pesca</p>
-                  <p>gamba cruda</p>
+            {selectedFish ? (
+              <div>
+                <div className="descripcion">
+                  <img src={selectedFish.img} alt={selectedFish.name} />
+                  <div>
+                    <p>pesca</p>
+                    <p>{selectedFish.nombre}</p>
+                  </div>
+                </div>
+                <div className="detailimg">
+                  <div>
+                    <TextImg
+                      img="xp.svg"
+                      size="small"
+                      color="grey"
+                      text={selectedFish.exp}
+                    />
+                    <TextImg
+                      img="mastery_header.svg"
+                      size="small"
+                      color="grey"
+                      text="33"
+                    />
+                    <TextImg
+                      img="mastery_pool.svg"
+                      size="small"
+                      color="grey"
+                      text="41"
+                    />
+                  </div>
+                  <p>
+                    de {selectedFish.mintime} s a {selectedFish.maxtime} s
+                  </p>
                 </div>
               </div>
-              <div className="detailimg">
-                <div>
-                  <img src="" alt="xp" />
-                  <img src="" alt="cup" />
-                  <img src="" alt="cup" />
-                </div>
-                <p>de 4.00 s a 11.00 s</p>
-              </div>
-            </div>
+            ) : (
+              "Selecciona un pez"
+            )}
           </div>
         </div>
       </div>

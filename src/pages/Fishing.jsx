@@ -1,15 +1,13 @@
 import React from "react";
 import "../styles/fish.css";
 import Zone from "../components/Zone";
+import { zones } from "../data/fishes";
 function Fishing() {
   return (
     <div className="container">
-      <Zone/>
-      <Zone/>
-      <Zone/>
-      <Zone/>
-      <Zone/>
-      <Zone/>
+      {zones.map((zone)=>(
+        <Zone zone={zone} />
+      ))}
     </div>
   );
 }

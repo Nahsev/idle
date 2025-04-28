@@ -52,6 +52,18 @@
     display: flex;
     padding: 10px 20px;
     transition: transform 0.2s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        height: 33px;
+        width: 33px;
+        margin-right: 14px;
+    }
+    p{
+        margin-top: 5px;
+    }
 }
 
 .fish:hover{
