@@ -55,7 +55,7 @@ function Zone({ zone }) {
                   </div>
                 </div>
                 <div className="detailimg">
-                  <div>
+                  <div  className="stats">
                     <TextImg
                       img="xp.svg"
                       size="small"

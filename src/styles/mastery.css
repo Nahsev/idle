@@ -1,34 +1,29 @@
 
+
 .mastercontainer{
     display: flex;
+    align-items: center;
     justify-content: space-between;
-
+    width: 100%;
+    margin: ;
 }
+
+
+
+
 .masterylvl{
-    display: flex;
-    background-color: #1f66a8;
-}
-
-.masteryheader{
-    width: 20px;
-    height: 20px;
     
+    background-color: aqua;
+    display: flex;
 }
-
-
+.exp{
+    width: 120%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .cargamastery{
-    position:absolute;
-    display: flex;
-    justify-content: center;
-    min-height: 10px;
-    width: 200%;
-    background-color: rgb(143, 255, 218);
-    
+    height: 10px;
+    width: 120%;
+    background-color: aquamarine;
 }
-.progreso {
-    
-    width: 60%;
-    height: 100%;
-    background-color: #1f66a8;
-    border-radius: 10px;
-  }

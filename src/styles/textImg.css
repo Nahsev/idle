@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+margin: 10px;
   img {
     width: 75%;
     position: relative;
@@ -35,6 +35,7 @@
 .small {
   height: 35px;
   width: 35px;
+  
 }
 
 .blue {

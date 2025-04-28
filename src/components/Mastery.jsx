@@ -10,10 +10,10 @@ function Mastery() {
         </div>
       </div>
       <div className="exp">
-        <p>---0/892</p> {/* mejorara con datos de niveles */}
+        <p>---0 / 892</p> {/* mejorara con datos de niveles */}
         {/* <p>{(experienciactual, expericiaparaelsiguientenivel)}</p> */}
         <div className="cargamastery">
-          <div className="progreso" style={{ width: "60%" }}></div>
+          <div className="progreso" ></div>
         </div>
       </div>
     </div>

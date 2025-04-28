@@ -27,6 +27,7 @@
     div{
         display: flex;
     }
+    padding: 10px;
 }
 
 .zoneBody{
@@ -84,6 +85,12 @@
         align-items: center;
         flex-direction: column;
     }
+}
+
+.stats{
+    display: flex;
+    margin: 20px;
+    
 }
 .detailimg{
     display: flex;

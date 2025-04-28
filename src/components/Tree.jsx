@@ -16,7 +16,7 @@ function Tree({ nameTree, player }) {
         <p>cut</p>
         <h2>{nameTree}</h2>
         <p>{`EXP de habilidad en ${trees[nameTree].xp} / ${trees[nameTree].time} segundos`}</p>
-        <img src={`${trees[nameTree].icon}`} alt="" />
+        <img src={`${trees[nameTree].icon}`} alt="" className="treeimg" />
         <div className={`cortando ${talando ? "talando" : ""}`}></div>
         
         <Mastery/>
