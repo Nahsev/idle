@@ -8,9 +8,9 @@ function NoDeCombate({ player }) {
   return (
     <>
       {skills.map((skill) => (
-        <Link to={`/${skill.key}`} className='link' key={skill.key}>
+        <Link to={`${skill.key}`} className='link' key={skill.key}>
           <div className='iconName'>
-            <img src={`${skill.icon}`} alt="" />
+            <img src={`/idle/${skill.icon}`} alt="" />
             <p>{skill.name}</p>
           </div>
           <div>({player.skill[skill.key].lvl}/99)</div>

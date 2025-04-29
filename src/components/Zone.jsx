@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
-import TextImg from "../components/TextImg";
-
+import Masteryexp from "./Masteryexp";
 function Zone({ zone }) {
-  const [selectedFish, setSelectedFish] = useState(null);
+  const [selected, setSelected] = useState(null);
 
   const handleFishClick = (fish) => {
-    setSelectedFish(fish);
+    setSelected(fish);
   };
 
   return (
@@ -45,43 +44,25 @@ function Zone({ zone }) {
           </div>
 
           <div className="fishDetails">
-            {selectedFish ? (
+            {selected ? (
               <div>
                 <div className="descripcion">
-                  <img src={`/idle/${selectedFish.img}`} alt={selectedFish.name} />
+                  <img src={`/idle/${selected.img}`} alt={selected.name} />
                   <div>
                     <p>pesca</p>
-                    <p>{selectedFish.nombre}</p>
+                    <p>{selected.nombre}</p>
                   </div>
                 </div>
                 <div className="detailimg">
-                  <div  className="stats">
-                    <TextImg
-                      img="xp.svg"
-                      size="small"
-                      color="grey"
-                      text={selectedFish.exp}
-                    />
-                    <TextImg
-                      img="mastery_header.svg"
-                      size="small"
-                      color="grey"
-                      text="33"
-                    />
-                    <TextImg
-                      img="mastery_pool.svg"
-                      size="small"
-                      color="grey"
-                      text="41"
-                    />
-                  </div>
+                  <Masteryexp selected={selected} />
+
                   <p>
-                    de {selectedFish.mintime} s a {selectedFish.maxtime} s
+                    de {selected.mintime} s a {selected.maxtime} s
                   </p>
                 </div>
               </div>
             ) : (
-              "Selecciona un pez"
+              <p className="textpez">"Selecciona un pez"</p>
             )}
           </div>
         </div>

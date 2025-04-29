@@ -15,7 +15,7 @@ function App() {
         <Aside player={player} />
         <Header />
         <Routes>
-          <Route path="/" element={<Woodcutting player={player} />} />
+          <Route path="/idle/" element={<Woodcutting player={player} />} />
           <Route
             path="/woodcutting"
             element={<Woodcutting player={player} />}

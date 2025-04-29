@@ -1,102 +1,96 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.zoneContainer {
+  margin: 30px;
 
+  width: 40%;
+  min-width: 500px;
+}
 
-
-
-
-.container{
+.zoneHeader {
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  background-color: #434d5b;
+  align-items: center;
+  justify-content: space-between;
+  div {
     display: flex;
-    flex-wrap: wrap;
+  }
+  padding: 10px;
 }
 
-.zoneContainer{
-    margin: 30px;
-
-    width: 40%;
-    min-width: 500px;
+.zoneBody {
+  display: flex;
+  background-color: #232a35;
+  margin: 5xp;
+  justify-content: space-between;
 }
 
-
-.zoneHeader{
-    display: flex;
-    flex-direction: row;
-    /* flex-wrap: wrap; */
-    background-color: #434d5b;
-    align-items: center;
-    justify-content: space-between;
-    div{
-        display: flex;
-    }
-    padding: 10px;
-}
-
-.zoneBody{
-    display: flex;
-    background-color: #232a35;
-    margin: 5xp;
-   justify-content: space-between;
-}
-
-
-
-.fishDetails{
-    
-    height: 100%;
-    width: 45%;
-}
-
-
-.fish{
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-    display: flex;
-    padding: 10px 20px;
-    transition: transform 0.2s ease;
-
+.fishDetails {
+  height: 100%;
+  width: 50%;
+  min-height: 200px; 
     display: flex;
     justify-content: center;
     align-items: center;
-    img{
-        height: 33px;
-        width: 33px;
-        margin-right: 14px;
-    }
-    p{
-        margin-top: 5px;
-    }
 }
 
-.fish:hover{
-    background-color: #2d5223;
-    box-shadow: 0 2px 6px rgba(127, 234, 99, 0.5);
-    transform: translateY(-5px)
-}
-.descripcion{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 10px;
-    img{
-        margin-left: -20%;
-    }
-    div{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
+.fish {
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  display: flex;
+  padding: 10px 20px;
+  transition: transform 0.2s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: 33px;
+    width: 33px;
+    margin-right: 14px;
+  }
+  p {
+    margin-top: 5px;
+  }
 }
 
-.stats{
-    display: flex;
-    margin: 20px;
-    
+.fish:hover {
+  background-color: #2d5223;
+  box-shadow: 0 2px 6px rgba(127, 234, 99, 0.5);
+  transform: translateY(-5px);
 }
-.detailimg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-    
+.descripcion {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  text-align: center;
+}
+
+.stats {
+  display: flex;
+  margin: 20px;
+}
+.detailimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.textpez {
+  text-align: center;
+ 
+  min-width: 200px;
+
+}
+
+.prueba {
+  width: 100%;
 }

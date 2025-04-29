@@ -44,6 +44,7 @@
 
 .probabilitis {
   width: 70%;
+  padding: 10px 0 0 10px;
 }
 .imges{
     display: flex;
@@ -53,7 +54,16 @@
 }
 
 .product {
-  
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.produce{
+ display: flex;
+}
+.tienes{
+  display: flex;
 }
 .exp {
   
