@@ -5,8 +5,9 @@ import Mastery from "../components/Mastery";
 import Masteryexp from "../components/Masteryexp";
 import { logs } from "../data/logs";
 function Firemaking() {
-const [selected,setSelected]= useState('')
+const [selected,setSelected]= useState('normal')
 
+console.log(selected);
 
   return (
     <div className="container">
@@ -17,20 +18,23 @@ const [selected,setSelected]= useState('')
             <option value="" hidden>
               Selecciona los troncos
             </option>
-            <option value="logsoak">Tronco de roble</option>
-            <option value="logswillow">Tronco de sauce</option>
-            <option value="maple">Tronco de arce</option>
+            
+  {Object.values(logs).map((log) => (
+    <option key={log.name} value={log.nombre}>
+      tronco de {log.nombre}
+    </option>
+  ))}
           </select>
         </div>
 
         <div className="logquemar">
           <div className="log bgc">
-            <TextImg img="logsnormal.png" size="big" color="blue" text="a" />
+            <TextImg img={logs[selected].img} size="big" color="blue" text="a" />
           </div>
           <div className="probabilitis bgc">
             <p>quemar</p>
-            <h2>troncos normales</h2>
-            {/* poner el nombre del tronco seleccionado */}
+            <h2>{selected}</h2>
+            
             <div className="imges">
               <TextImg
                 img="preservation.svg"
@@ -50,25 +54,25 @@ const [selected,setSelected]= useState('')
           <div>
             <p>Produce:</p>
             <div className="produce">
-              <TextImg img="logsnormal.png" size="mid" color="blue" text="f" />
-              <TextImg img="ashes.png" size="mid" color="blue" text="g" />
+              <TextImg img="orecoal.png" size="mid" color="grey" text="d" />
+              <TextImg img="ashes.png" size="mid" color="grey" text="e" />
             </div>
           </div>
           <div>
             <p>Tienes:</p>
             <div className="tienes">
-              <TextImg img="logsnormal.png" size="mid" color="blue" text="f" />
+              <TextImg img="orecoal.png" size="mid" color="blue" text="f" />
               <TextImg img="ashes.png" size="mid" color="blue" text="g" />
             </div>
           </div>
         </div>
         <div className="exp bgc">
           <p>Otorga:</p>
-          <Masteryexp selected={selected}/>
+          <Masteryexp selected={logs[selected]}/>
         </div>
         <div className="quemar bgc">
           <button>Quemar</button>
-          <TextImg img="logsnormal.png" size="mid" color="grey" text="k" />
+          <TextImg img="timer.webp" size="mid" color="blue" text="1,95 s" />
         </div>
       </div>
     </div>

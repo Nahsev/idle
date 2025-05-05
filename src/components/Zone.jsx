@@ -1,21 +1,25 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye } from "@fortawesome/free-solid-svg-icons";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import Masteryexp from "./Masteryexp";
 function Zone({ zone }) {
   const [selected, setSelected] = useState(null);
-
+const [render, setRender] = useState(true)
   const handleFishClick = (fish) => {
     setSelected(fish);
   };
 
+const toggle = () =>{
+  setRender(!render)
+}
+
   return (
     <div>
       <div className="zoneContainer">
-        <div className="zoneHeader">
+        <div onClick={toggle} className="zoneHeader">
           <div>
-            <FontAwesomeIcon icon={faEye} />
-            <p>{zone.name}</p>
+            <FontAwesomeIcon icon={ render ? faEye :   faEyeSlash} />
+            <p >{zone.name}</p>
           </div>
           <div>
             <p>pesca: {zone.probabilities.fishing}% </p>
@@ -23,7 +27,9 @@ function Zone({ zone }) {
             <p>especial: {zone.probabilities.special}% </p>
           </div>
         </div>
-        <div className="zoneBody">
+         
+         
+      {render ? (<div   className="zoneBody">
           <div className="fishes">
             {zone.fishes.map((fish) => (
               <div
@@ -62,10 +68,10 @@ function Zone({ zone }) {
                 </div>
               </div>
             ) : (
-              <p className="textpez">"Selecciona un pez"</p>
+              <p className="textpez">Selecciona un pez</p>
             )}
           </div>
-        </div>
+        </div>) : <div></div>}
       </div>
     </div>
   );

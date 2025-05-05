@@ -65,9 +65,15 @@
 .tienes{
   display: flex;
 }
-.exp {
-  
-}
+
 .quemar {
-  height: 10px;
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  button{
+    background-color: #E5AE67;
+    padding: 10px;
+    border-radius: 10px;
+
+  };
 }
